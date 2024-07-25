@@ -29,6 +29,7 @@ pipeline {
         }
         stage('Dependencies') {
           steps {
+            echo 'landing install the application...  now....'
             sh 'npm install'
           }
         }
