@@ -65,7 +65,8 @@ pipeline {
                 echo 'Acting on Configuration File - ecosystem.config.cjs'
                 // sh ' pm2 restart "landing" || pm2 start .output/server/index.mjs -i max --name "landing"'
                 // sh 'NODE_ENV=production pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs' // [error] Missing `NUXT_UI_PRO_LICENSE` license key.
-                sh 'pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs'
+                // sh 'pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs'
+                sh ' pm2 restart "landing" || pm2 start .output/server/index.mjs -i max --name "landing"'
             }
         }
     }
